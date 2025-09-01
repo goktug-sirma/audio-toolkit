@@ -1,0 +1,33 @@
+# --------------------
+# Ses dosyaları (kişisel veri eklenmesin)
+data/*.wav
+data/*.mp3
+
+# --------------------
+# Python cache dosyaları
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --------------------
+# Virtual environment (venv, conda env vs.)
+.env
+.venv
+env/
+venv/
+ENV/
+.conda/
+
+# --------------------
+# Jupyter Notebook checkpoint'leri
+.ipynb_checkpoints
+
+# --------------------
+# IDE / Editor dosyaları
+.vscode/
+.idea/
+
+# --------------------
+# Mac ve Windows sistem dosyaları
+.DS_Store
+Thumbs.db
