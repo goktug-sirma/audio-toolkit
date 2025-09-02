@@ -5,12 +5,11 @@ This repository covers time- and frequency-domain analysis, filtering, spectrogr
 ```
 
 ## 🚀 Contents
-```
+
 - **waveform_fft.py**    → Audio waveform + Fourier spectrum  
 - **filtering.py**       → Low-pass, High-pass, Band-pass filter implementations  
 - **spectrogram.py**     → Time–frequency analysis (STFT, spectrogram)  
 - **noise_reduction.py** → Noise addition and cleaning with filters 
-```
 
 ## 📂 Project Structure
 ```
