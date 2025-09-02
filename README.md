@@ -1,15 +1,18 @@
 # 🎶 Audio Signal Processing Toolkit
+```
+Basic signal processing applications on audio signals.  
+This repository covers time- and frequency-domain analysis, filtering, spectrogram generation, and noise reduction.  
+```
 
-Ses sinyalleri üzerinde temel sinyal işleme uygulamaları.  
-Bu repo, zaman ve frekans analizini, filtrelemeyi, spectrogram üretmeyi ve gürültü azaltmayı içerir.  
+## 🚀 Contents
+```
+- **waveform_fft.py**    → Audio waveform + Fourier spectrum  
+- **filtering.py**       → Low-pass, High-pass, Band-pass filter implementations  
+- **spectrogram.py**     → Time–frequency analysis (STFT, spectrogram)  
+- **noise_reduction.py** → Noise addition and cleaning with filters 
+```
 
-## 🚀 İçerik
-- **waveform_fft.py** → Ses dalga formu + Fourier spektrumu  
-- **filtering.py** → Low-pass, High-pass, Band-pass filtre uygulamaları  
-- **spectrogram.py** → Zaman–frekans analizi (STFT, spectrogram)  
-- **noise_reduction.py** → Gürültü ekleme ve filtre ile temizleme  
-
-## 📂 Proje Yapısı
+## 📂 Project Structure
 ```
 audio-toolkit/
 ├── src/
@@ -18,19 +21,20 @@ audio-toolkit/
 │ ├── spectrogram.py
 │ └── noise_reduction.py
 ├── data/
-│ └── toolkit.wav # örnek ses dosyası
+│ └── toolkit.wav # sample audio file
 ├── README.md
 └── requirements.txt
+
 ```
-## 📦 Kurulum
+## 📦 Installation
 ```bash
-git clone https://github.com/kullanici_adi/audio-toolkit.git
+git clone https://github.com/your_username/audio-toolkit.git
 cd audio-toolkit
 pip install -r requirements.txt
 ```
 
-## ▶️ Kullanım
-Her script grafik üretir. data/ klasörüne kendi .wav dosyanızı koyarak çalıştırabilirsiniz.
+## ▶️ Usage
+Each script generates plots. Place your own .wav file inside the data/ folder and run:
 
 ```bash
 python src/waveform_fft.py
@@ -39,17 +43,20 @@ python src/spectrogram.py
 python src/noise_reduction.py
 ```
 
-## 📝 Notlar
-Örnekleme Frekansı (fs): Sesin çözünürlüğünü belirler.
-Cutoff Frekansı: Filtrenin geçirdiği/bastırdığı frekans sınırı.
-STFT (Short-Time Fourier Transform): Sinyali kısa pencerelerle Fourier’e ayırarak zaman–frekans bilgisi verir.
-Noise Reduction: Gürültü eklenmiş sinyali filtreyle temizleme örneği.
+## 📝 Notes
+```
+- Sampling Frequency (fs): Defines the resolution of the audio signal.
+- Cutoff Frequency: Determines the pass/stop frequency limits of a filter.
+- STFT (Short-Time Fourier Transform): Splits the signal into short windows and applies Fourier transform for time–frequency information.
+- Noise Reduction: Demonstrates filtering a noisy signal to restore the clean version.
+```
 
-## 📊 Örnek Çıktılar
-**Dalga Formu + Fourier Spektrumu**  
+## 📊 Example Outputs
+
+**Waveform + Fourier Spectrum**  
 ![Waveform FFT](images/waveform_fft.png)
 
-**Filtreleme Sonuçları**  
+**Filtering Results**  
 ![Filtering](images/filtering.png)
 
 **Spectrogram**  
@@ -57,3 +64,7 @@ Noise Reduction: Gürültü eklenmiş sinyali filtreyle temizleme örneği.
 
 **Noise Reduction**  
 ![Noise Reduction](images/noise_reduction.png)
+
+## 📜 License
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for details.
