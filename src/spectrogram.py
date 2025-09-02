@@ -22,7 +22,7 @@ f, t, Sxx = spectrogram(data, fs=fs, nperseg=1024)
 plt.figure(figsize=(12,6))
 #Bu spectrogram kısmında oluyor çünkü Sxx’in bazı hücreleri 0 değerinde. 10*np.log10(0) → matematikte −∞.
 plt.pcolormesh(t, f, 10*np.log10(Sxx + 1e-10), shading='gouraud') 
-plt.title("Sound Signal Spectrogramı")
+plt.title("Sound Signal Spectrogram")
 plt.ylabel("Frequency (Hz)")
 plt.xlabel("Time (t)")
 plt.colorbar(label="Power (dB)")
