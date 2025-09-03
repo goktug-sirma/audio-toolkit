@@ -1,4 +1,11 @@
 # 🎶 Audio Signal Processing Toolkit
+
+![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Status](https://img.shields.io/badge/Status-Work_in_Progress-orange.svg)
+![Domain](https://img.shields.io/badge/Domain-Audio%20Analysis-blueviolet)
+
+
 ```
 Basic signal processing applications on audio signals.  
 This repository covers time- and frequency-domain analysis, filtering, spectrogram generation, and noise reduction.  
