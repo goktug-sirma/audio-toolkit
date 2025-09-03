@@ -3,18 +3,14 @@ import matplotlib.pyplot as plt
 from scipy.io import wavfile
 from scipy.signal import butter, filtfilt
 
-# --- 1. Ses dosyasını oku ---
 fs, data = wavfile.read("data/toolkit.wav")
 
-# Stereo ise mono'ya düşür
 if data.ndim > 1:
     data = data[:, 0]
 
-# --- 2. Gürültü ekle ---
 noise = np.random.normal(0, 0.3*np.std(data), size=len(data))
 noisy_data = data + noise
 
-# --- 3. Low-pass filtre tanımla ---
 def butter_lowpass(data, cutoff, fs, order=5):
     nyq = 0.5 * fs
     normal_cutoff = cutoff / nyq
@@ -22,10 +18,8 @@ def butter_lowpass(data, cutoff, fs, order=5):
     y = filtfilt(b, a, data)
     return y
 
-# 3000 Hz altında bırak
 filtered_data = butter_lowpass(noisy_data, 3000, fs)
 
-# --- 4. Grafikler ---
 t = np.linspace(0, len(data)/fs, num=len(data))
 
 plt.figure(figsize=(12,8))
