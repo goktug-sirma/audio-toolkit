@@ -5,7 +5,7 @@ This repository covers time- and frequency-domain analysis, filtering, spectrogr
 ```
 
 ## 🚀 Contents
-
+- **main.py**            → Entry point for running all modules
 - **waveform_fft.py**    → Audio waveform + Fourier spectrum  
 - **filtering.py**       → Low-pass, High-pass, Band-pass filter implementations  
 - **spectrogram.py**     → Time–frequency analysis (STFT, spectrogram)  
@@ -14,13 +14,20 @@ This repository covers time- and frequency-domain analysis, filtering, spectrogr
 ## 📂 Project Structure
 ```
 audio-toolkit/
+├── main.py
 ├── src/
-│ ├── waveform_fft.py
-│ ├── filtering.py
-│ ├── spectrogram.py
-│ └── noise_reduction.py
+│   ├── __init__.py
+│   ├── waveform_fft.py
+│   ├── filtering.py
+│   ├── spectrogram.py
+│   └── noise_reduction.py
 ├── data/
-│ └── toolkit.wav # sample audio file
+│   └── toolkit.wav   # sample audio file
+├── images/           # generated outputs
+│   ├── waveform_fft.png
+│   ├── filtering.png
+│   ├── spectrogram.png
+│   └── noise_reduction.png
 ├── README.md
 └── requirements.txt
 
@@ -33,13 +40,21 @@ pip install -r requirements.txt
 ```
 
 ## ▶️ Usage
-Each script generates plots. Place your own .wav file inside the data/ folder and run:
+Now all functionality is accessible through main.py:
 
 ```bash
-python src/waveform_fft.py
-python src/filtering.py
-python src/spectrogram.py
-python src/noise_reduction.py
+# Waveform + Fourier Spectrum
+python main.py fft
+
+# Filtering (Low-pass, High-pass, Band-pass)
+python main.py filter
+
+# Spectrogram (STFT)
+python main.py spectrogram
+
+# Noise Reduction
+python main.py noise
+
 ```
 
 ## 📝 Notes
